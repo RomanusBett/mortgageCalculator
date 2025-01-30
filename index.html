@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mortgageCalculator</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="mortgage-container">
+        <h2>Mortgage Calculator</h2>
+        <div class="mortgage-data">
+            <div class="mortgageFieldBox">
+                <p>Purchase price: $<span id="purchasePrice">0</span></p>
+                <input id="purchaseInput" type="range" min="10000" max="500000" value="50" oninput="purchasePrice.innerText=this.value">
+            </div>
+            <div class="mortgageFieldBox">
+                <p>Down payment: $<span id="downPayment">0</span></p>
+                <input id="downInput" type="range" min="100000" max="200000" value="50" oninput="downPayment.innerText=this.value">
+            </div>
+            <div class="mortgageFieldBox">
+                <p>Repayment time: <span id="repaymentTime">10</span>years</p>
+                <input id="repaymentPeriod" type="range" min="1" max="30" value="50" oninput="repaymentTime.innerText=this.value">
+            </div>
+            <div class="mortgageFieldBox">
+                <p>interest rate: <span id="interestRate">3</span>%</p>
+                <input id="interestAmount" type="range" min="1" max="15" value="50" oninput="interestRate.innerText=this.value">
+            </div>
+            <div>
+                <p>Loan Amount</p>
+                <p class="feedbackBox" id="loanAmountBox">$0</p>
+            </div>
+            <div>
+                <p>Estimated per month:</p>
+                <p class="feedbackBox" id="perMonthBox">$0</p>
+            </div>
+
+        </div>
+        <button class="getMortgageButton">Get a mortgage quote</button>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
